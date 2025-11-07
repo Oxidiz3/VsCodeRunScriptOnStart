@@ -1,0 +1,16 @@
+{
+    "startupScripts.commands": [
+        {
+            "label": "Node Version",
+            "command": "node --version"
+        },
+        {
+            "label": "Current Directory",
+            "command": "Get-Location"
+        },
+        {
+            "label": "List Files",
+            "command": "Get-ChildItem | Select-Object -First 3"
+        }
+    ]
+}

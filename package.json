@@ -1,0 +1,72 @@
+{
+  "name": "startup-scripts",
+  "displayName": "Startup Scripts",
+  "description": "Run shell commands on VS Code startup and show output as notifications",
+  "version": "0.0.2",
+  "publisher": "vscode-extensions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oxidiz3/VsCodeRunScriptOnStart"
+  },
+  "license": "GPL-3.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Startup Scripts",
+      "properties": {
+        "startupScripts.commands": {
+          "type": "array",
+          "description": "Commands to run on startup",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Label to show in notification"
+              },
+              "command": {
+                "type": "string",
+                "description": "Shell command to execute"
+              }
+            },
+            "required": [
+              "label",
+              "command"
+            ]
+          },
+          "default": []
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^8.44.0",
+    "mocha": "^11.7.5",
+    "typescript": "^5.1.6"
+  }
+}
