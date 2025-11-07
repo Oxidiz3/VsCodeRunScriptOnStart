@@ -12,12 +12,7 @@ This extension automatically runs user-defined shell commands when VS Code start
 
 ## Installation
 
-1. Download the VSIX file from the releases page
-2. Open VS Code
-3. Go to the Extensions view (Ctrl+Shift+X)
-4. Click on the "..." menu at the top of the Extensions view
-5. Select "Install from VSIX..."
-6. Choose the downloaded VSIX file
+Install from extension star name is "Run Script On Startup"
 
 ## Configuration
 
