@@ -1,4 +1,4 @@
-# Startup Scripts Extension for VS Code
+# Run Script On Startup Extension for VS Code
 
 This extension automatically runs user-defined shell commands when VS Code starts and displays their output as toast notifications.
 
@@ -62,6 +62,23 @@ Each command in the `startupScripts.commands` array should have:
 - Output is truncated to 200 characters for readability
 - Commands run sequentially
 - No interactive command support
+
+## Disclaimer
+
+⚠️ **USE AT YOUR OWN RISK** ⚠️
+
+This extension executes shell commands on your system. By using this extension, you acknowledge and agree that:
+
+1. You are solely responsible for the commands you configure and their consequences
+2. The author(s) accept no liability for any damage, data loss, or other issues that may arise from using this extension
+3. You should review and understand any command before adding it to your configuration
+4. Running untrusted or malicious commands could harm your system
+
+It is strongly recommended to:
+- Only use commands you understand and trust
+- Be cautious with commands that modify system files or settings
+- Keep backups of important data
+- Test commands in a terminal first before adding them to startup
 
 ## License
 
